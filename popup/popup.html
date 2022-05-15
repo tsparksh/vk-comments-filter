@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+    <title>VKHIDDER</title>
+</head>
+<script type="text/javascript" src="popup.js"></script>
+<body>
+    <div>
+    	<p>Ключевые слова для фильтра через запятую (в любом падеже и числе)</p>
+    	<textarea id="keywords" rows="4" class="w-100" placeholder="Например: свинья, корова, люди, Эквадор"></textarea>
+    </div>
+    <br>
+    <div>
+    	<input type="checkbox" id="isBotsFilterEnabled">
+  		<label for="isBotsFilterEnabled">Включить фильтр ботов по базе <a href="https://roskomsvoboda.org/60528/" target="_blank">госвони</a>?</label>
+    </div>
+    <br>
+    <input type="button" class="w-100" value="Сохранить" id="save-btn">
+    <hr>
+    <p>Автор: <a href="https://vk.com/sparksed" target="_blank">Zakhar Vozmilov</a></p>
+</body>
+</html>

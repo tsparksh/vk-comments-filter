@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "VK Comments Filter / ВК фильтр комментариев",
+    "description": "Расширение для фильтрации комментариев вконтакте по ключевым слов и против ботов",
+    "version": "0.0.1",
+    "icons": {
+        "16": "logo/logo-16.png",
+        "48": "logo/logo-48.png",
+        "128": "logo/logo-128.png"
+    },
+    "options_page": "settings/settings.html",
+    "action": {
+        "default_title": "VK Comments Filter",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": ["storage"],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [{
+        "js": ["./third-party/az.js", "./third-party/az.dawg.js", "./third-party/az.morph.js", "./third-party/az.tokens.js", "foreground.js"],
+        "matches": ["https://vk.com/*"]
+    }],
+    "web_accessible_resources": [
+        {
+          "resources": [ "/dicts/*" ],
+          "matches": [ "https://vk.com/*" ]
+        }
+    ]
+}
